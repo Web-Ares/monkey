@@ -60,13 +60,6 @@ input[type="search"]::-webkit-search-cancel-button {
     z-index: 1;
     font-family: 'MyriadProRegular';
 }
-/*.site__wrap:after {
-    content: '';
-    display: block;
-    clear: both;
-    width: 100%;
-    height: 500px;
-}*/
 .site__wrap{
     display: flex;
     flex-flow: wrap column;
@@ -98,7 +91,6 @@ input[type="search"]::-webkit-search-cancel-button {
     width: 100%;
     max-width: 1185px;
     margin: 0 auto;
-    text-align: center;
 }
 .site__footer-site{
     position: absolute;
@@ -346,21 +338,29 @@ input[type="search"]::-webkit-search-cancel-button {
     margin-top: -10px;
     margin-right: 5px;
 }
+.game_no-load .site__title{
+    margin-bottom: 36px;
+}
+
 /* --------------- /header__menu --------------- */
 
 /* --------------- game-item --------------- */
+
 .game{
     position: relative;
     margin-bottom: 60px;
     background: #fff;
     box-shadow: 1px 1px 12px 4px #dedede;
-    text-align: center;
+    text-align: left;
+}
+.game__wrap{
+    padding: 0 30px;
 }
 .game__item{
     display: inline-block;
     vertical-align: top;
     width: 203px;
-    margin: 0 3px 10px;
+    margin: 0 10px 10px;
     font-size: 22px;
     color: #737373;
     text-align: center;
@@ -372,7 +372,7 @@ input[type="search"]::-webkit-search-cancel-button {
     width: 100%;
     height: 202px;
     background: #414141;
-    margin-bottom: 5px;
+    margin-bottom: 8px;
 }
 .game__item:hover{
     opacity: .7;
@@ -380,14 +380,14 @@ input[type="search"]::-webkit-search-cancel-button {
 .game__more{
     display: block;
     position: relative;
-    width: 30px;
+    width: 58px;
     height: 70px;
-    padding-bottom: 90px;
+    padding-bottom: 72px;
     margin: 0 auto;
     z-index: 3;
     font-size: 16px;
     color: #d24021;
-    text-align: center;
+    text-align: left;
     cursor: pointer;
 }
 .game__more:after{
@@ -423,11 +423,16 @@ input[type="search"]::-webkit-search-cancel-button {
 /* --------------- /game-item --------------- */
 
 /* --------------- categories --------------- */
+.categories{
+    padding: 0 30px;
+}
 .categories__item{
+    width: 260px;
     display: inline-block;
     vertical-align: top;
     font-size: 19px;
     text-align: left;
+    line-height: 31px;
 }
 .categories__link{
     display: block;
@@ -438,7 +443,7 @@ input[type="search"]::-webkit-search-cancel-button {
 }
 .categories__link:before{
     position: absolute;
-    top: 7px;
+    top: 9px;
     left: 0;
     width: 13px;
     height: 15px;
@@ -517,6 +522,25 @@ input[type="search"]::-webkit-search-cancel-button {
 }
 @media (min-width: 1024px) {
 
+    .site__wrap {
+        display: block;
+    }
+    .site__wrap:after {
+        content: '';
+        display: block;
+        clear: both;
+        width: 100%;
+        height: 540px;
+    }
+    .site__footer {
+        z-index: 2;
+        position: absolute;
+        height: 540px;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        width: 100%;
+    }
     .site{
         padding-top: 18px;
     }
@@ -530,7 +554,10 @@ input[type="search"]::-webkit-search-cancel-button {
         right: 55px;
     }
     .site__content {
-        padding: 39px 36px 0;
+        padding: 39px 36px 26px;
+    }
+    .game__wrap {
+        padding:0 0 0 3px;
     }
     /* --------------- menu --------------- */
     .header__menu {
@@ -583,8 +610,8 @@ input[type="search"]::-webkit-search-cancel-button {
 
     /* --------------- game --------------- */
     .game__item {
-        width: 202px;
-        margin: 0 8px 31px;
+        width: 18.2%;
+        margin: 0 0.7% 31px;
     }
     /* --------------- /game --------------- */
 
@@ -598,7 +625,10 @@ input[type="search"]::-webkit-search-cancel-button {
         width: 19.6%;
         line-height: 30px;
     }
-
+    .categories__link:before {
+        position: absolute;
+        top: 7px;
+    }
     /* --------------- logo --------------- */
     .logo {
         width: 519px;
