@@ -425,10 +425,9 @@ input[type="search"]::-webkit-search-cancel-button {
     padding-bottom: 20px;
 }
 .game__block{
-    width: 96%;
     min-height: 20px;
     max-width: 1073px;
-    margin: 0 auto;
+    margin: 0 20px;
     background-color: #3f3f3f;
     overflow: hidden;
 }
@@ -447,11 +446,16 @@ input[type="search"]::-webkit-search-cancel-button {
     width: 70px;
     height: 70px;
     margin-left: 5px;
-    border: 1px solid #f7c36e;
+    border: 2px solid #f7c36e;
     border-radius: 5px;
     box-shadow: 0 0 3px #777;
     transition: box-shadow .3s ease;
     -webkit-transition: box-shadow .3s ease;
+    background: rgb(238,137,73);
+    background: -moz-linear-gradient(top,  rgba(238,137,73,1) 0%, rgba(203,50,26,1) 100%);
+    background: -webkit-linear-gradient(top,  rgba(238,137,73,1) 0%,rgba(203,50,26,1) 100%);
+    background: linear-gradient(to bottom,  rgba(238,137,73,1) 0%,rgba(203,50,26,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ee8949', endColorstr='#cb321a',GradientType=0 );
 }
 .game-share__item:hover{
     box-shadow: 3px 3px 3px #ccc;
@@ -535,6 +539,27 @@ input[type="search"]::-webkit-search-cancel-button {
 }
 /* --------------- /categories--------------- */
 
+/* --------------- reviews--------------- */
+.reviews{
+    padding: 0 20px 20px;
+}
+.reviews__ava{
+    width: 106px;
+    height: 111px;
+    margin-bottom: 20px;
+    border: 1px solid #acacac;
+    background-color: #3f3f3f;
+}
+.reviews__comment{
+    width: 100%;
+    height: 111px;
+    margin-bottom: 20px;
+    padding: 10px 15px;
+    border: 1px solid #acacac;
+    box-shadow: 0 0 5px #ccc inset;
+}
+/* --------------- /reviews--------------- */
+
 @media (min-width: 767px) {
 
     .site__footer-layout {
@@ -586,6 +611,24 @@ input[type="search"]::-webkit-search-cancel-button {
         margin-left: 20px;
     }
     /* --------------- /game-share --------------- */
+
+
+    /* --------------- reviews--------------- */
+    .reviews{
+        overflow: hidden;
+    }
+    .reviews__frame{
+        display: flex;
+        display: -webkit-flex;
+    }
+    .reviews__ava{
+        margin-right: 20px;
+        margin-bottom: 20px;
+    }
+    .reviews__comment{
+        margin-bottom: 20px;
+    }
+    /* --------------- /reviews--------------- */
 
 }
 
@@ -682,6 +725,9 @@ input[type="search"]::-webkit-search-cancel-button {
     }
     .game__wrap {
         padding:0 0 0 3px;
+    }
+    .game__block{
+        margin: 0 auto;
     }
     /* --------------- /game --------------- */
 
