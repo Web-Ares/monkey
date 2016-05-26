@@ -484,6 +484,103 @@ input[type="search"]::-webkit-search-cancel-button {
 }
 /* --------------- /categories--------------- */
 
+/* --------------- contact--------------- */
+.contact{
+    background: #ffffff;
+    margin-bottom: 50px;
+}
+.contact .site__title{
+    margin-bottom: 15px;
+}
+.contact__form{
+    padding: 20px 20px;
+}
+.contact__form fieldset{
+    text-align: left;
+}
+.contact__comment{
+    display: block;
+    font-size: 17px;
+    color:#000000;
+    text-transform: uppercase;
+    font-weight: 600;
+    text-align: center;
+    letter-spacing: 0.4px;
+}
+.contact__site{
+    margin-bottom: 13px;
+    font-size: 17px;
+    color: #d23f22;
+    text-align: center;
+    letter-spacing: .5px;
+}
+.contact__form textarea,
+.contact__form input{
+    display: block;
+    width: 100%;
+    height: 48px;
+    margin-bottom: 31px;
+    padding: 0 7px 0;
+    border: 1px solid #c5c5c5;
+    background: #ebeaea;
+    font-family: 'MyriadProRegular';
+    color: #3d3d3d;
+    font-size: 17px;
+}
+.contact__form textarea{
+    width: 100%;
+    height: 158px;
+    padding: 7px 0 0 7px;
+}
+.contact__form label{
+    display: inline-block;
+    margin-bottom: 15px;
+    font-weight: 600;
+    font-size: 17px;
+    color: #3d3d3d;
+}
+.contact__site-link{
+    color: #d23f22;
+}
+.contact__site-link:hover{
+    text-decoration: underline;
+}
+.contact__enter {
+    width: 280px;
+    height: 130px;
+    margin-bottom: 20px;
+}
+#reason{
+    height: 32px;
+}
+.contact__enter-pic{
+    width: 100%;
+    height: 100%;
+}
+/* --------------- /contact--------------- */
+
+/* --------------- btn--------------- */
+.btn{
+    border: none;
+    padding: 0;
+    left: 11px;
+    width: 114px;
+    height: 40px;
+    background: #f0ad78;
+    background: -webkit-linear-gradient(top, #f0ad78 0%,#cb3019 50%);
+    background: -o-linear-gradient(top, #f0ad78 0%,#cb3019 50%);
+    background: linear-gradient(top, #f0ad78 0%,#cb3019 50%);
+    font-size: 17px;
+    font-weight: normal;
+    text-align: center;
+    color: #fff;
+    transition: opacity .3s ease;
+    -webkit-transition: opacity .3s ease;
+}
+.btn:hover{
+    opacity: .7;
+}
+/* --------------- /btn--------------- */
 
 @media (min-width: 767px) {
 
@@ -536,6 +633,27 @@ input[type="search"]::-webkit-search-cancel-button {
         padding: 0 30px;
     }
     /* --------------- /categories --------------- */
+
+    /* --------------- contact --------------- */
+    .contact {
+        margin-bottom: 73px;
+    }
+    .contact__form input {
+        width: 46.4%;
+    }
+    .contact__form{
+        position: relative;
+        padding: 12px 28px 53px;
+        text-align: right;
+    }
+    .contact__enter {
+        position: absolute;
+        right: 30px;
+        top: 77px;
+        width: 45%;
+        height: 200px;
+    }
+    /* --------------- /contact --------------- */
 }
 @media (min-width: 1024px) {
 
@@ -672,5 +790,14 @@ input[type="search"]::-webkit-search-cancel-button {
         margin-left: 20px;
     }
     /* --------------- /social --------------- */
+
+    /* --------------- contact --------------- */
+    .contact__enter {
+        right: 29px;
+        top: 71px;
+        width: 44%;
+        height: 198px;
+    }
+    /* --------------- /contact --------------- */
 
 }
