@@ -4,8 +4,8 @@ $(function(){
         MenuOpen($(this));
     });
 
-    $.each( $('.speakers_load' ), function() {
-        new Speakers ( $( this ) );
+    $.each( $('.game_load' ), function() {
+        new Game ( $( this ) );
     } );
 
 } );
@@ -49,12 +49,12 @@ var MenuOpen = function(obj) {
     _init();
 };
 
-var Speakers = function( obj ) {
+var Game = function( obj ) {
 
     //private properties
     var _self = this,
         _obj = obj,
-        _btnMore = _obj.find( '.speakers__more' ),
+        _btnMore = _obj.find( '.game__more' ),
         _btnAction = _btnMore.data( 'action' ),
         _wrapper = _obj.find( '.game__wrap' ),
         _request = new XMLHttpRequest();

@@ -7,7 +7,7 @@ input[type="search"]::-webkit-search-cancel-button {
 }
 /*
     main styles
-    version: 15.01.2013
+    version: 26.05.2016
 
     placeholder
 
@@ -16,6 +16,14 @@ input[type="search"]::-webkit-search-cancel-button {
     site
 
     logo
+
+    social
+
+    header__menu
+
+    game
+
+    categories
 */
 
 /* --------------- placeholder --------------- */
@@ -121,6 +129,43 @@ input[type="search"]::-webkit-search-cancel-button {
     background: url("../img/site-title.png") no-repeat;
     text-align: left;
 }
+.site__header-search {
+    position: absolute;
+    z-index: 3;
+    right: 40px;
+    bottom: 7px;
+    font-size: 14px;
+    color: #fff;
+    border-radius: 21px;
+    width: 184px;
+    height: 27px;
+    background: #b23a28;
+}
+.site__header-search .search-field {
+    border: none;
+    border-radius: 15px;
+    background: #b23a28;
+}
+.site__header-search .search-btn {
+    width: 18px;
+    height: 26px;
+    position: absolute;
+    top: 0;
+    right: -39px;
+    border: none;
+    background: url("../img/icon-search.png") no-repeat top;
+    background-size: contain;
+    opacity: 1;
+    -webkit-transition: opacity 300ms ease-in-out;
+    transition: opacity 300ms ease-in-out;
+}
+.site__header-search input {
+    width: 100%;
+    height: 27px;
+    color: #fff;
+    padding-left: 20px;
+    padding-right: 20px;
+}
 /* --------------- /site --------------- */
 
 /* --------------- logo --------------- */
@@ -135,7 +180,6 @@ input[type="search"]::-webkit-search-cancel-button {
 }
 /* --------------- /logo --------------- */
 
-/* --------------- menu --------------- */
 /* --------------- social --------------- */
 .social{
     position: absolute;
@@ -185,46 +229,6 @@ input[type="search"]::-webkit-search-cancel-button {
     background-position: -363px 0;
 }
 /* --------------- /social --------------- */
-
-/* --------------- search --------------- */
-.site__header-search {
-    position: absolute;
-    z-index: 3;
-    right: 40px;
-    bottom: 7px;
-    font-size: 14px;
-    color: #fff;
-    border-radius: 21px;
-    width: 184px;
-    height: 27px;
-    background: #b23a28;
-}
-.site__header-search .search-field {
-    border: none;
-    border-radius: 15px;
-    background: #b23a28;
-}
-.site__header-search .search-btn {
-    width: 18px;
-    height: 26px;
-    position: absolute;
-    top: 0;
-    right: -39px;
-    border: none;
-    background: url("../img/icon-search.png") no-repeat top;
-    background-size: contain;
-    opacity: 1;
-    -webkit-transition: opacity 300ms ease-in-out;
-    transition: opacity 300ms ease-in-out;
-}
-.site__header-search input {
-    width: 100%;
-    height: 27px;
-    color: #fff;
-    padding-left: 20px;
-    padding-right: 20px;
-}
-/* --------------- /search --------------- */
 
 /* --------------- header__menu --------------- */
 .header__menu {
@@ -338,19 +342,13 @@ input[type="search"]::-webkit-search-cancel-button {
     margin-top: -10px;
     margin-right: 5px;
 }
-.game_no-load .site__title{
-    margin-bottom: 36px;
-}
-.game_no-load{
-    padding-bottom: 20px;
-}
 /* --------------- /header__menu --------------- */
 
-/* --------------- game-item --------------- */
-
+/* --------------- game --------------- */
 .game{
     position: relative;
     margin-bottom: 60px;
+    padding-bottom: 20px;
     background: #fff;
     box-shadow: 1px 1px 12px 4px #dedede;
     text-align: left;
@@ -409,11 +407,11 @@ input[type="search"]::-webkit-search-cancel-button {
 .game__more:hover:after{
     opacity: .7;
 }
-.speakers__more{
+.game__more{
     -webkit-transition: all 0.3s;
     transition: all 0.3s;
 }
-.speakers__more.hidden{
+.game__more.hidden{
     opacity: 0;
     visibility: hidden;
 }
@@ -422,7 +420,10 @@ input[type="search"]::-webkit-search-cancel-button {
     transform: scale(.8);
     -webkit-transform: scale(.8);
 }
-/* --------------- /game-item --------------- */
+.game_no-load .site__title{
+    margin-bottom: 36px;
+}
+/* --------------- /game --------------- */
 
 /* --------------- categories --------------- */
 .categories{
@@ -489,6 +490,7 @@ input[type="search"]::-webkit-search-cancel-button {
     .site__footer-layout {
         text-align: left;
     }
+
     /* --------------- menu --------------- */
     .header__menu-btn > span:before {
         bottom: 300%;
@@ -503,11 +505,15 @@ input[type="search"]::-webkit-search-cancel-button {
         width: 371px;
     }
     /* --------------- /logo --------------- */
+
+    /* --------------- game --------------- */
     .game__item {
         display: inline-block;
         width: 30%;
         margin: 0 10px 10px;
     }
+    /* --------------- /game --------------- */
+
     /* --------------- social --------------- */
     .social{
         top: 44px;
@@ -522,15 +528,18 @@ input[type="search"]::-webkit-search-cancel-button {
     }
     /* --------------- /social --------------- */
 
+    /* --------------- categories --------------- */
     .categories__item {
         width: 30%;
     }
     .categories{
         padding: 0 30px;
     }
+    /* --------------- /categories --------------- */
 }
 @media (min-width: 1024px) {
 
+    /* --------------- site --------------- */
     .site__wrap {
         display: block;
     }
@@ -565,9 +574,8 @@ input[type="search"]::-webkit-search-cancel-button {
     .site__content {
         padding: 39px 36px 26px;
     }
-    .game__wrap {
-        padding: 0 0 0 3px;
-    }
+    /* --------------- site --------------- */
+
     /* --------------- menu --------------- */
     .header__menu {
         top: auto;
@@ -622,8 +630,15 @@ input[type="search"]::-webkit-search-cancel-button {
         width: 18.3%;
         margin: 0 0.7% 31px;
     }
+    .game {
+       padding-bottom: 0;
+    }
+    .game__wrap {
+          padding: 0 0 0 3px;
+      }
     /* --------------- /game --------------- */
 
+    /* --------------- categories --------------- */
     .categories{
         padding: 0 10px 0 71px;
     }
@@ -638,6 +653,8 @@ input[type="search"]::-webkit-search-cancel-button {
         position: absolute;
         top: 7px;
     }
+    /* --------------- /categories --------------- */
+
     /* --------------- logo --------------- */
     .logo {
         width: 519px;
