@@ -420,7 +420,64 @@ input[type="search"]::-webkit-search-cancel-button {
     transform: scale(.8);
     -webkit-transform: scale(.8);
 }
+.game_frame{
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+}
+.game__block{
+    width: 96%;
+    min-height: 20px;
+    max-width: 1073px;
+    margin: 0 auto;
+    background-color: #3f3f3f;
+    overflow: hidden;
+}
 /* --------------- /game-item --------------- */
+
+/* --------------- game-share --------------- */
+.game-share{
+    display: flex;
+    display: -webkit-flex;
+    justify-content: space-around;
+    -webkit-justify-content: space-around;
+    margin-bottom: 30px;
+}
+.game-share__item{
+    position: relative;
+    width: 70px;
+    height: 70px;
+    margin-left: 5px;
+    border: 1px solid #f7c36e;
+    border-radius: 5px;
+    box-shadow: 0 0 3px #777;
+    transition: box-shadow .3s ease;
+    -webkit-transition: box-shadow .3s ease;
+}
+.game-share__item:hover{
+    box-shadow: 3px 3px 3px #ccc;
+}
+.game-share__item:after{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    content: '';
+    background: url('../img/icons-share.png') no-repeat 0 0;
+}
+.game-share__item_like:after{
+    background-position: 14px 50%;
+}
+.game-share__item_cloud:after{
+    background-position: -75px 50%;
+}
+.game-share__item_tw:after{
+    background-position: -166px 50%;
+}
+.game-share__item_fb:after{
+    background-position: -257px 50%;
+}
+/* --------------- /game-share --------------- */
 
 /* --------------- categories --------------- */
 .categories{
@@ -478,7 +535,6 @@ input[type="search"]::-webkit-search-cancel-button {
 }
 /* --------------- /categories--------------- */
 
-
 @media (min-width: 767px) {
 
     .site__footer-layout {
@@ -519,7 +575,20 @@ input[type="search"]::-webkit-search-cancel-button {
     .categories{
         padding: 0 30px;
     }
+
+    /* --------------- game-share --------------- */
+    .game-share{
+        justify-content: flex-end;
+        -webkit-justify-content: flex-end;
+        padding-right: 20px;
+    }
+    .game-share__item{
+        margin-left: 20px;
+    }
+    /* --------------- /game-share --------------- */
+
 }
+
 @media (min-width: 1024px) {
 
     .site__wrap {
@@ -556,9 +625,7 @@ input[type="search"]::-webkit-search-cancel-button {
     .site__content {
         padding: 39px 36px 26px;
     }
-    .game__wrap {
-        padding:0 0 0 3px;
-    }
+
     /* --------------- menu --------------- */
     .header__menu {
         top: auto;
@@ -613,6 +680,9 @@ input[type="search"]::-webkit-search-cancel-button {
         width: 18.2%;
         margin: 0 0.7% 31px;
     }
+    .game__wrap {
+        padding:0 0 0 3px;
+    }
     /* --------------- /game --------------- */
 
     .categories{
@@ -646,5 +716,11 @@ input[type="search"]::-webkit-search-cancel-button {
         margin-left: 20px;
     }
     /* --------------- /social --------------- */
+
+    /* --------------- game-share --------------- */
+    .game-share{
+        padding-right: 0;
+    }
+    /* --------------- /game-share --------------- */
 
 }
